@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nutritional Website: Gallery</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+         <div id="main">
+            <div id="header">
+                <h1>Healthy Eating Website</h1>
+
+                <div id="social">
+                  <a href="https://facebook.com">
+                      <img src="images/facebook.jpg" alt="facebook">
+                  </a>
+                  <a href="https://x.com">
+                      <img src="images/x.jpg" alt="x">
+                  </a>
+                  <a href="https://linkedin.com">
+                      <img src="images/linkedin.jpg" alt="linkedin">
+                  </a>
+              </div>
+          </div>
+
+          <div id="nav">
+              <ul>
+                  <li><a href="home.html">Home</a></li>
+                  <li><a href="Healthy Eating.html">Healthy Eating</a></li>
+                  <li><a href="Sleeping Habits.html">Sleeping Habits</a></li>
+                  <li><a href="Exercise.html">Exercise</a></li>
+                  <li><a class="active" href="Gallery.html">Gallery</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
+              </ul>
+          </div>
+
+            <div id="content">
+                <div id="title">
+                    <h2>Gallery</h2>
+                </div>
+
+                <div class="slideshow-container">
+
+                    <div class="mySlides fade">
+                      <div class="numbertext">1 / 9</div>
+                      <img src="images/diet-plate.webp" style="width:100%">
+                      <div class="text">Healthy Diet</div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <div class="numbertext">2 / 9</div>
+                      <img src="images/380.jpg" style="width:100%">
+                      <div class="text">Healthy Dave</div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <div class="numbertext">3 / 9</div>
+                      <img src="images/Catching+Z's_+A+guide+to+healthy+sleep+habits+in+2024.png" style="width:100%">
+                      <div class="text">Healthy Sleeping</div>
+                    </div>
+    
+                    <div class="mySlides fade">
+                        <div class="numbertext">4 / 9</div>
+                        <img src="images/how-to-eat-healthy.webp" style="width:100%">
+                        <div class="text">Healthy Food</div>
+                      </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">5 / 9</div>
+                        <img src="images/l0908b16207233934035.jpg" style="width:100%">
+                        <div class="text">Exercise</div>
+                      </div>
+
+                      <div class="mySlides fade">
+                        <div class="numbertext">6 / 9</div>
+                        <img src="images/RW-31-12-EXCERCISE-PERSONALITY_COMP.webp" style="width:100%">
+                        <div class="text">Exercise Routines</div>
+                      </div>
+
+                      <div class="mySlides fade">
+                        <div class="numbertext">7 / 9</div>
+                        <img src="images/rules-of-healthy-sleep.webp" style="width:100%">
+                        <div class="text">Healthy Sleep</div>
+                      </div>
+
+                      <div class="mySlides fade">
+                        <div class="numbertext">8 / 9</div>
+                        <img src="images/Dashboard_952_The-many-health-benefits-of-regular-exercise_11_20.jpg" style="width:100%">
+                        <div class="text">Cadrio</div>
+                      </div>
+
+                      <div class="mySlides fade">
+                        <div class="numbertext">9 / 9</div>
+                        <img src="images/Exploring-the-Impact-of-Diet-on-Sleep-Quality-An-Analysis-1.png" style="width:100%">
+                        <div class="text">How Diet Effects Sleep</div>
+                      </div>
+                    
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+                    
+                    </div>
+                    <br>
+                    
+                    <div style="text-align:center">
+                      <span class="dot" onclick="currentSlide(1)"></span> 
+                      <span class="dot" onclick="currentSlide(2)"></span> 
+                      <span class="dot" onclick="currentSlide(3)"></span> 
+                      <span class="dot" onclick="currentSlide(4)"></span> 
+                      <span class="dot" onclick="currentSlide(5)"></span> 
+                      <span class="dot" onclick="currentSlide(6)"></span> 
+                      <span class="dot" onclick="currentSlide(7)"></span> 
+                      <span class="dot" onclick="currentSlide(8)"></span> 
+                      <span class="dot" onclick="currentSlide(9)"></span> 
+                    </div>
+                    
+                    <script>
+                    let slideIndex = 1;
+                    showSlides(slideIndex);
+                    
+                    function plusSlides(n) {
+                      showSlides(slideIndex += n);
+                    }
+                    
+                    function currentSlide(n) {
+                      showSlides(slideIndex = n);
+                    }
+                    
+                    function showSlides(n) {
+                      let i;
+                      let slides = document.getElementsByClassName("mySlides");
+                      let dots = document.getElementsByClassName("dot");
+                      if (n > slides.length) {slideIndex = 1}    
+                      if (n < 1) {slideIndex = slides.length}
+                      for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";  
+                      }
+                      for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                      }
+                      slides[slideIndex-1].style.display = "block";  
+                      dots[slideIndex-1].className += " active";
+                    }
+                    </script>
+
+                <div id="footer">
+                    <a href="home.html">Home</a> | 
+                    <a href="Healthy Eating.html">Healthy Eating</a> | 
+                    <a href="Sleeping Habits.html">Sleeping Habits</a> | 
+                    <a href="Exercise.html">Exercise</a> | 
+                    <a href="Gallery.html">Gallery</a> | 
+                    <a href="contact.html">Contact Us</a>
+                </div>
+    </body>
+</html>
